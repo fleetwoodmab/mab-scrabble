@@ -2,10 +2,16 @@ class ScrabbleScore {
 
     fun scoreWord(word: String): Int{
         //TODO calculate using the scoreLetter method below, the scrabble value of the word passed as a parameter
+        for(c in word.toCharArray()) {
+           println("$c: " + scoreLetter(c))
+        }
         return 0
+
     }
 
-    //TODO the program if the user enters in any chars other than capital letters...try fix this.
+    //https://www.codevscolor.com/kotlin-print-each-character-string
+
+
     //Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions?page=1
     fun scoreLetter(char: Char): Int {
         return when (char) {
