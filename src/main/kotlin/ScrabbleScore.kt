@@ -1,8 +1,10 @@
+import kotlin.system.exitProcess
+
 class ScrabbleScore {
 var sum = 0
 
     fun scoreWord(word: String): Int {
-        //TODO calculate using the scoreLetter method below, the scrabble value of the word passed as a parameter
+
         for(c in word.toCharArray()) {
            println("$c: " + scoreLetter(c))
             sum += scoreLetter(c)
@@ -23,6 +25,7 @@ var sum = 0
             in "K" -> 5
             in "JX" -> 8
             in "QZ" -> 10
+            in "0" -> exitProcess(0) //https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.system/exit-process.html
             else -> error("Unknown character")
         }
     }
