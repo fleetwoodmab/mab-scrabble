@@ -1,12 +1,13 @@
 class ScrabbleScore {
+var sum = 0
 
-    fun scoreWord(word: String): Int{
+    fun scoreWord(word: String): Int {
         //TODO calculate using the scoreLetter method below, the scrabble value of the word passed as a parameter
         for(c in word.toCharArray()) {
            println("$c: " + scoreLetter(c))
+            sum += scoreLetter(c)
         }
-        return 0
-
+        return sum
     }
 
     //https://www.codevscolor.com/kotlin-print-each-character-string
@@ -35,3 +36,5 @@ class ScrabbleScore {
   J, X ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 8
   Q, Z ---------------------------- 10"""
 }
+
+
