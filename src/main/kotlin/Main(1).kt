@@ -19,6 +19,5 @@ fun main(args: Array<String>) {
     }
 }
 
-//fixed uppercase
 
 
